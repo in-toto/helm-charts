@@ -42,6 +42,6 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@a917fd15b20e8b64b94d9158ad54cd6345335584
         with:
-          pages_branch: charts-page
+          pages_branch: gh-pages
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
