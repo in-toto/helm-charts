@@ -1,4 +1,4 @@
-# Copyright 2023 The Archivista Contributors
+# Copyright 2024 The Archivista Contributors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@ image:
   repository: ghcr.io/in-toto/archivista
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.7.0"
+  tag: "0.8.0"
 
 nameOverride: ""
 fullnameOverride: ""
