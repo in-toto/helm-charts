@@ -12,12 +12,27 @@ to establish connections to each datastore. These environment variables can be a
 
 ## Quick Installation
 
+Archivista helm charts are hosted by in-toto helm repository.
+To add the repository run following command.
+
+```shell
+helm repo add in-toto https://in-toto.io/helm-charts
+```
+If you have already added the repository, run following command to update the
+repository.
+
+```shell
+helm repo update
+```
+
 To install the helm chart with default values run following command.
 The [Values](#Values) section describes the configuration options for this chart.
 
 ```shell
-helm install archivista .
+helm install archivista in-toto/archivista
 ```
+
+
 
 ## Uninstallation
 
@@ -40,33 +55,9 @@ helm uninstall archivista
 
 ## Values
 
-| Key                                        | Type   | Default       |
-|---                                         |---     |---            |
-| affinity                                   | object | `{}`          |
-| autoscaling.enabled                        | bool   | `false`       |
-| autoscaling.maxReplicas                    | int    | `10`          |
-| autoscaling.minReplicas                    | int    | `1`           |
-| autoscaling.targetCPUUtilizationPercentage | int    | `80`          |
-| deployment.env                             | list   | `[]`          |
-| fullnameOverride                           | string | `""`          |
-| image.pullPolicy                           | string | `"IfNotPresent"` |
-| image.repository                           | string | `"ghcr.io/testifysec/archivista"` |
-| image.tag                                  | string | `"0.1.1"`     |
-| ingress.annotations                        | object | `{}`          |
-| ingress.className                          | string | `""`          |
-| ingress.enabled                            | bool   | `true`        |
-| ingress.hosts[0].host                      | string | `"archivista.localhost"` |
-| ingress.hosts[0].path                      | string | `"/"`         |
-| ingress.tls                                | list   | `[]`          |
-| nameOverride                               | string | `""`          |
-| nodeSelector                               | object | `{}`          |
-| podAnnotations                             | object | `{}`          |
-| podSecurityContext                         | object | `{}`          |
-| replicaCount                               | int    | `1`           |
-| resources                                  | object | `{}`          |
-| serviceAccount.annotations                 | object | `{}`          |
-| serviceAccount.create                      | bool   | `false`       |
-| serviceAccount.name                        | string | `""`          |
-| service.port                               | int    | `8082`        |
-| service.type                               | string | `"ClusterIP"` |
-| tolerations                                | list   | `[]`          |
+Run:
+
+```shell
+helm show values in-toto/archivista
+```
+
