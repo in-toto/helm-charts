@@ -2,6 +2,27 @@ apiVersion: v1
 entries:
   archivista:
   - apiVersion: v2
+    appVersion: 0.9.1
+    created: "2025-04-02T18:50:42.495223003Z"
+    description: A Helm chart for Archivista
+    digest: e9334cfb97944a9a370cd856e42dbf8863773b38e4524483c7f6987d15cf23d9
+    home: https://github.com/in-toto/
+    keywords:
+    - in-toto
+    - attestation
+    - policy
+    - storage
+    maintainers:
+    - name: in-toto
+    name: archivista
+    sources:
+    - https://github.com/in-toto/helm-charts
+    - https://github.com/in-toto/archivista
+    type: application
+    urls:
+    - https://github.com/in-toto/helm-charts/releases/download/archivista-0.8.2/archivista-0.8.2.tgz
+    version: 0.8.2
+  - apiVersion: v2
     appVersion: 0.9.0
     created: "2025-02-05T20:42:39.254440263Z"
     description: A Helm chart for Archivista
@@ -64,4 +85,4 @@ entries:
     urls:
     - https://github.com/in-toto/helm-charts/releases/download/archivista-0.6.0/archivista-0.6.0.tgz
     version: 0.6.0
-generated: "2025-02-05T20:42:39.254452316Z"
+generated: "2025-04-02T18:50:42.495259562Z"
