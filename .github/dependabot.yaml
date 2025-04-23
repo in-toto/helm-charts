@@ -1,0 +1,22 @@
+version: 2
+enable-beta-ecosystems: true
+updates:
+  - package-ecosystem: "helm" 
+    directory: "/charts/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "deps-helm"
+      include: "scope"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
