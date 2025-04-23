@@ -9,7 +9,7 @@ updates:
       prefix: "deps-helm"
       include: "scope"
     groups:
-      github-actions:
+      helm-charts:
         patterns:
           - "*"
   - package-ecosystem: "github-actions"
